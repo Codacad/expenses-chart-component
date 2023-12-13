@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(33, 100%, 98%);
+  font-family: 'DM sans', sans-serif;
+}
+
+div.attribution{
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: "DM sans",sans-serif;
+}
+div.attribution a{
+  text-decoration: none;
+  font-weight: 800;
+  color: hsl(25, 47%, 15%);
+}
+div.expense-chart{
+  width: 450px;  
+}
+div.expense-chart header{
+  box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:hsl(10, 79%, 65%);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+header span{
+  color: hsl(27, 66%, 92%);
+}
+header h1{
+  color: #fff;
+}
+
+div.expense-chart div.body{
+  box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;  
+}
+
+div.body div.week-expenses .title{
+  font-size: 180%;
+  color: hsl(25, 47%, 15%);
+  margin-bottom: 20px;
+}
+
+div.bar-chart{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  gap: 20px;  
+}
+div.bar-chart div.chart-contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;  
+}
+
+div.chart-contents div.bar{
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 5px;
+  height: 100px;
+  width: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media (max-width:520px){
+  div.expense-chart{
+    width: 380px;
+  }
+  div.chart-contents div.bar{
+    width: 30px;
+  }
+}
+
+div.chart-contents div.amount{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  font-size: 14px;
+  top: -30px;
+}
+
+div.bar:hover div.amount{
+  width: auto;
+  height: auto;
+  background-color: hsl(25, 47%, 15%);
+  color: #fff;
+  padding: 3px;
+  border-radius: 3px;
+}
+div.chart-contents:nth-of-type(3) div.bar{
+  background-color: hsl(186, 34%, 60%);
+}
+div.chart-contents div.bar:hover{
+  background-color: hsla(10, 79%, 65%, 0.701);  
+}
+div.chart-contents:nth-of-type(3) div.bar:hover{
+  background-color: hsla(186, 34%, 60%, 0.703);
+}
+div.chart-contents div.day{
+  color: hsl(28, 10%, 53%);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+div.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;  
+}
+div.footer div.this-month{
+  display: flex;
+  flex-direction: column;  
+}
+
+div.this-month span{
+  color: hsl(28, 10%, 53%);
+}
+div.this-month h1{
+  color: hsl(25, 47%, 15%);
+  font-size: 230%;  
+}
+div.footer div.percent{
+  text-align: right;
+}
+div.footer div.percent h3{
+  font-size: 100%;
+  color: hsl(25, 47%, 15%);
+}
+div.footer div.percent span{
+  color: hsl(28, 10%, 53%);
+}
